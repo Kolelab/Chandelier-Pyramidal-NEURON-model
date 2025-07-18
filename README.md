@@ -1,7 +1,5 @@
 # Chandelier-Pyramidal-NEURON-model
 
-## Chandelier–Pyramidal Cell NEURON Model
-
 This repository contains a NEURON simulation model of a pyramidal cell (PyC) and a chandelier cell (ChC). It was developed to study how GABAergic inhibition at different synapse locations (AIS, soma, basal dendrite) affects PyC firing. 
 ---
 
