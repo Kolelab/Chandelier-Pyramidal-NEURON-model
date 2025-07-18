@@ -71,4 +71,4 @@ python -i experiments/trainofspikes_simulation.py
 
 ### Important tips:
 - Make sure you run this from the root folder (where the compiled mod/ mechanisms are located), or copy the nrnmech.dll or x86_64/ folder to the same folder as your script.
-- Use the -i flag if you want the NEURON GUI windows (e.g., Shape, Voltage Graph, RunControl) to appear and keep the Python session interactive.
+- Use the -i flag if you want to keep the Python session interactive, allowing you to work with the NEURON GUI windows (e.g., Shape, Voltage Graph, RunControl), after the script runs.
