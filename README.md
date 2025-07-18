@@ -7,6 +7,8 @@ This repository contains a NEURON simulation model of a pyramidal cell (PyC) and
 
 `model/`	: Cell definitions and synapse setup scripts 
 
+`morphologies/` : PyC and ChC reconstruction files, adjusted from Jiang et al. (2015), Science, 350(6264), used for model development.
+
 `mod/` 		: NEURON `.mod` files for ion channels used by ChC and PyC
 
 `tools/` 	: Utilities for measuring tau, Rin, spike frequency, AP dynamics to validate the model's biological accuracy
