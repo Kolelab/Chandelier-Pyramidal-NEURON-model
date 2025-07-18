@@ -3,9 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from cells_def import Cell
 
-# --------------------------------------------------------------------------
 # 1) Basic Setup
-# --------------------------------------------------------------------------
 h.load_file("stdrun.hoc")  # NEURON standard run library
 
 # Create cells
@@ -25,9 +23,9 @@ pyr.add_sodium_channels()
 pyr.add_potassium_channels()
 pyr.add_ih_channels() 
 
-# --------------------------------------------------------------------------
+
 # 2) Define Current Injection Protocol
-# --------------------------------------------------------------------------
+
 amps = np.arange(0, 2.1, 0.1)  
 delay = 100     # ms: start injecting current at 100 ms
 dur = 500       # ms: inject current for 100 ms
@@ -38,9 +36,8 @@ h.tstop = tstop
 h.dt = 0.05
 h.celsius = 34
 
-# --------------------------------------------------------------------------
-# 3) Run f–I Curve for Both Cells using APCount
-# --------------------------------------------------------------------------
+# 3) Run I-F Curve for Both Cells using APCount
+
 firing_rates_chc = []
 firing_rates_pyr = []
 
@@ -71,23 +68,22 @@ for amp in amps:
         # Remove stimulus
         stim = None
 
-# --------------------------------------------------------------------------
-# 4) Plot the f–I Curves Side by Side
-# --------------------------------------------------------------------------
+# 4) Plot the I-F Curves Side by Side
+
 fig, axes = plt.subplots(1, 2, figsize=(12, 5))
 
 # Chandelier Cell
 axes[0].plot(amps, firing_rates_chc, 'o-', lw=2, label="Chandelier Cell")
 axes[0].set_xlabel("Current Injection (nA)", fontsize=12)
 axes[0].set_ylabel("Firing Rate (Hz)", fontsize=12)
-axes[0].set_title("f–I Curve - ChC", fontsize=14)
+axes[0].set_title("I-F Curve - ChC", fontsize=14)
 axes[0].grid(True)
 
 # Pyramidal Cell
 axes[1].plot(amps, firing_rates_pyr, 'o-', lw=2, label="Pyramidal Cell", color='r')
 axes[1].set_xlabel("Current Injection (nA)", fontsize=12)
 axes[1].set_ylabel("Firing Rate (Hz)", fontsize=12)
-axes[1].set_title("f–I Curve - Pyr", fontsize=14)
+axes[1].set_title("I-F Curve - Pyr", fontsize=14)
 axes[1].grid(True)
 
 plt.tight_layout()
