@@ -30,6 +30,21 @@ You can install the required libraries with:
 pip install -r requirements.txt
 ```
 
+## How to get started: 
+
+1. Install Python
+
+Download and install Python from:  
+https://www.python.org/downloads/  
+Make sure to check **"Add Python to PATH"** during installation.
+
+2. Install NEURON
+
+Install NEURON with Python support:  
+```bash
+pip install neuron
+```
+
 ## Compiling MOD Files (Required)
 Before running any simulations, you must compile the mechanisms in the `mod/` folder.
 
