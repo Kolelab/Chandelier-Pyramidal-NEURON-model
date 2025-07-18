@@ -32,13 +32,13 @@ pip install -r requirements.txt
 
 ## How to get started: 
 
-1. Install Python
+### 1. Install Python
 
 Download and install Python from:  
 https://www.python.org/downloads/  
 Make sure to check **"Add Python to PATH"** during installation.
 
-2. Install NEURON
+### 2. Install NEURON
 
 Install NEURON with Python support:  
 ```bash
@@ -53,3 +53,17 @@ Before running any simulations, you must compile the mechanisms in the `mod/` fo
 cd mod
 nrnivmodl
 ```
+### On Windows:
+- Open the "NEURON Command Prompt" (installed with NEURON)
+- Navigate to the mod folder using cd
+- Run:
+
+```bash
+mknrndll
+```
+
+## Running Simulations
+Run any script in the experiments/ or tools/ folder, for example:
+
+```bash
+python -i experiments/trainofspikes_simulation.py
